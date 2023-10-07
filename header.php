@@ -18,6 +18,7 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php wp_head() ?>
 
+<?php if(!is_user_logged_in()): ?>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PXZLJP2XJ1"></script>
 <script>
@@ -27,6 +28,7 @@
 
   gtag('config', 'G-PXZLJP2XJ1');
 </script>
+<?php endif; ?>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,11 +36,11 @@
 <link rel="stylesheet" type="text/css" media="screen,projection,print" href="<?php bloginfo('template_url'); ?>/css/style.css">	
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
 <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png" />
-	
+
 <script src="<?php bloginfo('template_url'); ?>/js/common.js?v=1"></script>
 <style>
   html.wordpress { margin-top:0 !important; }
-  #wpadminbar { z-index: 10000000 !important; }
+  #wpadminbar { z-index:10000000 !important; }
 </style>
 </head>
 
