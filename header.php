@@ -11,7 +11,7 @@
 <meta name="keyword" content="rwmc,高レベル放射性廃棄物,地層処分,海外情報">
 <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
-<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+<title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/icon.png" type="image/x-icon" />
 <!--link rel="stylesheet" type="text/css" media="screen,projection,print" href="<?php bloginfo('stylesheet_url'); ?>" /-->	
