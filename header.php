@@ -13,7 +13,7 @@
 
 <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 
-<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/icon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/icon.png" type="image/x-icon" />
 <!--link rel="stylesheet" type="text/css" media="screen,projection,print" href="<?php bloginfo('stylesheet_url'); ?>" /-->	
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php wp_head() ?>
@@ -33,11 +33,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="screen,projection,print" href="<?php bloginfo('template_url'); ?>/css/style.css">	
-<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
-<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png" />
+<link rel="stylesheet" type="text/css" media="screen,projection,print" href="<?php echo get_template_directory_uri(); ?>/css/style.css">	
+<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png" />
 
-<script src="<?php bloginfo('template_url'); ?>/js/common.js?v=1"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/common.js?v=1"></script>
 <style>
   html.wordpress { margin-top:0 !important; }
   #wpadminbar { z-index:10000000 !important; }
@@ -56,14 +56,14 @@
 <?php if ( is_home() || is_front_page() ) : ?>
         <h1 class="logo">
             <a href="https://www2.rwmc.or.jp/">
-                <img src="<?php bloginfo('template_url'); ?>/images/logo_03.png" width="64" height="64" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo_03.png" width="64" height="64" alt="" />
                 <span>諸外国での高レベル放射性廃棄物処分</span>
             </a>
         </h1>
 <?php else : ?>
         <p class="logo">
             <a href="https://www2.rwmc.or.jp/">
-                <img src="<?php bloginfo('template_url'); ?>/images/logo_03.png" width="64" height="64" alt="" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo_03.png" width="64" height="64" alt="" />
                 <span>諸外国での高レベル放射性廃棄物処分</span>
             </a>
         </p>
