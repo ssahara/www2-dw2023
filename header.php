@@ -54,14 +54,14 @@
 <?php if ( is_home() || is_front_page() ) : ?>
         <h1 class="logo">
             <a href="https://www2.rwmc.or.jp/">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo_03.png" width="64" height="64" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_03.png" width="64" height="64" alt="" />
                 <span>諸外国での高レベル放射性廃棄物処分</span>
             </a>
         </h1>
 <?php else : ?>
         <p class="logo">
             <a href="https://www2.rwmc.or.jp/">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo_03.png" width="64" height="64" alt="" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo_03.png" width="64" height="64" alt="" />
                 <span>諸外国での高レベル放射性廃棄物処分</span>
             </a>
         </p>
