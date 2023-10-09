@@ -13,8 +13,6 @@
 
 <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
 
-<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/icon.png" type="image/x-icon" />
-<!--link rel="stylesheet" type="text/css" media="screen,projection,print" href="<?php bloginfo('stylesheet_url'); ?>" /-->	
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php wp_head() ?>
 
@@ -34,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen,projection,print" href="<?php echo get_template_directory_uri(); ?>/css/style.css">	
-<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png" />
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/common.js?v=1"></script>
