@@ -15,9 +15,9 @@ remove_action('wp_head', 'feed_links_extra', 3);
 // top (www2.rwmc.or.jp/nf) のタイトルを修正する
 // WPトップの場合 wp_title() は空を返すが、
 // サイト全体では nfディレクトリトップなので「ニュースフラッシュ」と出力させる
-add_filter( 'wp_title', function ($title) {
+add_filter( 'wp_title', function ($title, $sep, $seplocation) {
     if (empty($title) && is_home()) {
-        $title = 'ニュースフラッシュ';
+        $title = 'ニュースフラッシュ'.' '.$sep.' ';
     }
     return $title;
-});
+}, 10, 3);
