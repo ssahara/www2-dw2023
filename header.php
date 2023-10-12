@@ -120,13 +120,14 @@
                 <!--<li><a href="<?php echo home_url(); ?>/?page_id=2249">海外情報ニュースフラッシュについて</a></li>-->
                 <li>記事アーカイブ
                     <ul class="spsubnav">
-                        <li><a href="<?php echo home_url(); ?>/?page_id=3111">全記事一覧</a></li>
-                        <li><a href="<?php echo home_url(); ?>/?page_id=3074">Follow Up 記事一覧</a></li>
-                        <li><a href="<?php echo home_url(); ?>/?page_id=3200">国別記事一覧</a></li>
-                        <li><a href="<?php echo home_url(); ?>/?feed=rss2" target="_blank">RSS</a></li>
+                        get_page_link( $id );
+                        <li><a href="<?php echo get_page_link(3111); ?>">全記事一覧</a></li>
+                        <li><a href="<?php echo get_page_link(3074); ?>">Follow Up 記事一覧</a></li>
+                        <li><a href="<?php echo get_page_link(3200); ?>">国別記事一覧</a></li>
+                        <li><a href="<?php echo get_feed_link('rss2'); ?>" target="_blank">RSS</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo home_url(); ?>/?page_id=1516">ポイントピックアップ</a></li>
+                <li><a href="<?php echo get_page_link(1516); ?>">ポイントピックアップ</a></li>
                 <li><a href="https://www2.rwmc.or.jp/publications:publications" target="_blank">情報冊子</a></li>
                 <li><a href="https://www2.rwmc.or.jp/links:start" target="_blank">リンク集</a></li>
                 <!--<li>諸外国トピカル情報
@@ -174,14 +175,14 @@
     <li class="gnav-toggle"><button class="is-tab">記事アーカイブ</button>
         <div class="gnav-mega">
             <ul class="gnav-mega-list">
-                <li><a href="<?php echo home_url(); ?>/?page_id=3111">全記事一覧</a></li>
-                <li><a href="<?php echo home_url(); ?>/?page_id=3074">Follow Up 記事一覧</a></li>
-                <li><a href="<?php echo home_url(); ?>/?page_id=3200">国別記事一覧</a></li>
-                <li><a href="<?php echo home_url(); ?>/?feed=rss2" target="_blank">RSS</a></li>
+                <li><a href="<?php echo get_page_link(3111); ?>">全記事一覧</a></li>
+                <li><a href="<?php echo get_page_link(3074); ?>">Follow Up 記事一覧</a></li>
+                <li><a href="<?php echo get_page_link(3200); ?>">国別記事一覧</a></li>
+                <li><a href="<?php echo get_feed_link('rss2'); ?>" target="_blank">RSS</a></li>
             </ul>
         </div>
     </li>
-    <li><a href="<?php echo home_url(); ?>/?page_id=1516">ポイントピックアップ</a></li>
+    <li><a href="<?php echo get_page_link(1516); ?>">ポイントピックアップ</a></li>
     <li><a href="https://www2.rwmc.or.jp/publications:publications" target="_blank">情報冊子</a></li>
     <li><a href="https://www2.rwmc.or.jp/links:start" target="_blank">リンク集</a></li>
     <!--<li class="gnav-toggle"><button class="is-tab">諸外国トピカル情報</button>
