@@ -1,5 +1,5 @@
 <div class="pagenavi">
-<a href="#dokuwiki__header" title="ページ先頭へスクロール"><img src="<?php bloginfo('template_url'); ?>/images/icn_arrow03.svg" alt="Back to Top" width="37" height="37" title="ページ先頭へスクロール"/></a>
+<a href="#dokuwiki__header" title="ページ先頭へスクロール"><img src="<?php echo get_template_directory_uri(); ?>/images/icn_arrow03.svg" alt="Back to Top" width="37" height="37" title="ページ先頭へスクロール"/></a>
 </div>
 
 
