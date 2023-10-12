@@ -115,12 +115,11 @@
                     <span></span>
                 </div>
             </div>
-                <ul class="spnav-list">
+            <ul class="spnav-list">
                 <!--<li><a href="<?php echo home_url(); ?>">HOME</a></li>-->
                 <!--<li><a href="<?php echo home_url(); ?>/?page_id=2249">海外情報ニュースフラッシュについて</a></li>-->
                 <li>記事アーカイブ
                     <ul class="spsubnav">
-                        get_page_link( $id );
                         <li><a href="<?php echo get_page_link(3111); ?>">全記事一覧</a></li>
                         <li><a href="<?php echo get_page_link(3074); ?>">Follow Up 記事一覧</a></li>
                         <li><a href="<?php echo get_page_link(3200); ?>">国別記事一覧</a></li>
