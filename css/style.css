@@ -1699,21 +1699,26 @@ ul.posts-by-tag-list.is-open {
 /* } */
 /* =Print Style
 -------------------------------------------------------------- */
-
 @media print {
 
-  div#logo {
-    display: none;
-  }
-
-  div#leftside , div#wp_page_numbers {
-    display: none;
-  }
   #dokubook_container {
     position: static;
   }
+  #dokuwiki__header .headings {
+    width: 100%;
+  }
+  #dokuwiki__usertools,
+  #dokuwiki__sitetools {
+    display: none;
+  }
   #container, #home {
     border: none;
+  }
+  nav.gnav { display: none; }
+  .spnav { display: none; }
+
+  div#wp_page_numbers {
+    display: none;
   }
   div.navigation, div.pagenavi {
     display: none;
@@ -1738,10 +1743,8 @@ ul.posts-by-tag-list.is-open {
   p.noprint {
     display: none;
   }
-  .spnav {
+  div.pagettl div.list-category { display: none; }
+  div.detail-pager {
     display: none;
-  }
-  #dokuwiki__header .headings {
-    width: 100%;
   }
 } /* end media print */
