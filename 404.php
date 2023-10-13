@@ -2,14 +2,8 @@
 /**
  * 404.php
  */
-get_header();
+    get_header();
 ?>
-
-
-
-
-
-
 
 
 <h1 class="postitle">Page not found</h1>
@@ -22,13 +16,10 @@ get_header();
 </div>
 
 <?php
-if (function_exists('simpleYearlyArchive')) {
-   simpleYearlyArchive('yearly','','24');
-}
+    if (function_exists('simpleYearlyArchive')) {
+        simpleYearlyArchive('yearly','','24');
+    }
 ?>
-
-
-
 
 
 <?php get_footer(); ?>

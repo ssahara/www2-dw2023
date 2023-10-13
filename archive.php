@@ -1,26 +1,24 @@
 <?php
-//header('Access-Control-Allow-Origin: *'); // FOR ADDTHIS CROSS ORIGIN REQUEST
-get_header();
+/**
+ * archive.php
+ */
+    get_header();
 ?>
 
 
-	<div class="pagettl">
-		<h1 class="page-bh">海外情報ニュースフラッシュ ｜<?php single_cat_title(); ?></h1>
+    <div class="pagettl">
+        <h1 class="page-bh">海外情報ニュースフラッシュ ｜<?php single_cat_title(); ?></h1>
         <div class="list-category">
             <a href="?page_id=3111">全記事一覧</a> | <a href="?page_id=3074">Follow up 記事一覧</a> | <a href="?page_id=3200">国別記事一覧</a>
         </div>
-	</div>
-
+    </div>
 
 
 <?php
-if(function_exists('wp_page_numbers')) {
-	wp_page_numbers(); 
-} ?>
-
-
-
-
+    if (function_exists('wp_page_numbers')) {
+        wp_page_numbers(); 
+    }
+?>
 
 
 <div class="news-list" id="<?php the_ID() ?>">
@@ -34,26 +32,25 @@ if(function_exists('wp_page_numbers')) {
 </div>
 
 
-
-
-
-
 <?php
-if(function_exists('wp_page_numbers')) {
-	wp_page_numbers(); 
-} else { ?>
-<div class="navigation">
-<div class="alignleft"><?php previous_posts_link(__('Newer entries', 'encyclopedia')) ?></div>
-<div class="alignright"><?php next_posts_link(__('Older entries', 'encyclopedia')) ?></div>
-</div>
-<br />
-<?php } ?>
+    if (function_exists('wp_page_numbers')) {
+        wp_page_numbers(); 
+    } else {
+?>
+    <div class="navigation">
+        <div class="alignleft"><?php previous_posts_link(__('Newer entries', 'encyclopedia')) ?></div>
+        <div class="alignright"><?php next_posts_link(__('Older entries', 'encyclopedia')) ?></div>
+    </div>
+    <br />
+<?php
+    }
+?>
 
 
-<h2 class="index-mh mt35">国名タグ一覧</h2>
-<div class="index-tag">
+    <h2 class="index-mh mt35">国名タグ一覧</h2>
+    <div class="index-tag">
+        <?php the_widget('WP_Widget_Tag_Cloud'); ?>
+    </div>
 
-<?php the_widget('WP_Widget_Tag_Cloud'); ?>
-</div>
 
 <?php get_footer() ?>

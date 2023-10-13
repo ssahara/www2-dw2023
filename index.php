@@ -1,6 +1,8 @@
 <?php
-//header('Access-Control-Allow-Origin: *'); // FOR ADDTHIS CROSS ORIGIN REQUEST
-get_header();
+/**
+ * index.php
+ */
+    get_header();
 ?>
 
 <?php if ( is_home() || is_front_page() ): ?>

@@ -17,7 +17,7 @@
   <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
   <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/apple-touch-icon.png" />
 
-  <?php wp_head() ?>
+  <?php wp_head(); ?>
 
 <?php if (!is_user_logged_in()): ?>
   <!-- Google tag (gtag.js) -->
@@ -198,8 +198,5 @@
 
 
 <div id="dokubook_container">
-
-
-
 
 <div id="home">
