@@ -6,17 +6,17 @@
 ?>
 
 
-
-
-<?php if (function_exists('ADDTOANY_SHARE_SAVE_KIT') ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
-
-<?php if (function_exists('wp_email')) { email_link(); } ?>
-
-<?php if (function_exists('wp_print')) { print_link(); } ?>
-
-
 <?php while ( have_posts() ) : the_post() ?>
 
+<?php
+    // excerpt は「抜粋」という意味
+    // WordPressのテンプレートタグに記事抜粋を表示する the_excerpt() がある。
+    // the_content()でも moreタグを本文中に入れるとそこまでの文字が出力できるが、
+    // 毎回moreタグ入れるのが面倒（入れ忘れたり）なら the_excerpt()を使った方が
+    // 作業が楽になる。excerpt のクラス名は、これを指向した際の名残りと思われる
+    // ニュースフラッシュ記事では moreタグを使用しないので、
+    // excerpt クラスのdivタグで囲む必要は（本来は）ない。
+?>
     <div class="excerpt">
 
 
@@ -68,11 +68,31 @@
 
     </div><!--excerpt-->
 
-<?php // related_posts(); ?>
+<?php
+    /**
+     * 投稿された記事に <!--nextpage--> と入力すると記事を分割できる。
+     * 記事が長い場合には適当なところで分割してページングすることができる。
+     * 分割ページのリンクを出力するためにテンプレートタグ wp_link_pages() を使う。
+     * ニュースフラッシュではこの機能は使用しないため、コメントアウトしておく
+     */
+    /*
+    wp_link_pages(array(
+        'before' => '<p><strong>Pages:</strong> ',
+        'after' => '</p>',
+        'next_or_number' => 'number',
+    ));
+     */
+?>
 
 <?php
-    wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number'));
+    /**
+     * ニュースフラッシュではコメント機能を使用しない。
+     * もしコメント機能を使う場合に備えてdivタグのみ出力しておく。
+     */
 ?>
+    <div class="comments">
+        <?php //if (comments_open()) comments_template(); ?>
+    </div>
 
 
 <?php endwhile ?>
