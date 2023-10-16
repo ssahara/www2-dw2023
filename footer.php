@@ -3,7 +3,7 @@
 </div>
 
 
-</div><!--home-->
+</div><!--wp__content-->
 </main><!--dokuwiki__content-->
 
 <div id="footer">

@@ -60,7 +60,7 @@
                     <span class="detail-pager-date"><?php echo mysql2date('Y-m-d', $nextpost->post_date); ?></span>
                     <?php echo get_the_title($nextpost->ID); ?></p>
                 </a>
-            </li>';
+            </li>
         <?php endif; ?>
     <?php endif; ?>
             </ul>

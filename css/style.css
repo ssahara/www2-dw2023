@@ -237,12 +237,19 @@ div.breadcrumbs .bcsep {
 /* 旧ルールを style-disused.css に移動 */
 
 
-/* div id="dokuwiki__content" 内はページコンテンツの表示エリア
+/* main id="dokuwiki__content" 内はページコンテンツの表示エリア
 /* WPでは、投稿または固定ページを表示する
-/* 新テーマでは、div id="dokubook__content の後に div id="home" を追加している */
+/* 新テーマでは、main id="dokubook__content の後に div id="wp__content" を追加している */
 #dokuwiki__content {
   position: static;
   font-size: 14px;
+}
+
+#wp__content {
+  line-height: 180%;
+  padding: 15px 16px;
+  background-color: white;
+  box-shadow: 0 0 7px rgba(0,0,0,0.3);
 }
 
 
@@ -386,7 +393,7 @@ img {
 
 /* ------------------------------------------------
  * div id="dokuwiki_content（未使用） シャドー付きボックス内
- * 現状、div =id="home" がその役割を果たしている
+ * 現状、div id="wp__content" がその役割を果たしている
  */
 /*
  * contentクラス: {single, page}.php で定義
@@ -1207,7 +1214,7 @@ ul.posts-by-tag-list.is-open {
     padding: 0;
   }
 
-  #home {
+  #wp__content {
     box-shadow: none;
     padding: 2.5vw 2.08333vw;
   }

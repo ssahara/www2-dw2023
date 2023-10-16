@@ -15,8 +15,9 @@
 #dokuwiki__content {
   position: static;
 }
-#container, #home {
+#wp__content {
   border: none;
+  box-shadow: none;
 }
 nav.gnav { display: none; }
 .spnav { display: none; }

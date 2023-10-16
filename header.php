@@ -201,4 +201,4 @@
 
 <main id="dokuwiki__content">
 
-<div id="home">
+<div id="wp__content">
