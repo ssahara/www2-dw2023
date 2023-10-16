@@ -237,9 +237,10 @@ div.breadcrumbs .bcsep {
 /* 旧ルールを style-disused.css に移動 */
 
 
-/* dokubook は旧テーマの名称。head.php の終りに div id="dokubook_container" をおいている */
-/* 新テーマでは、div id="dokubook_container の後に div id="home" を追加している */
-#dokubook_container {
+/* div id="dokuwiki__content" 内はページコンテンツの表示エリア
+/* WPでは、投稿または固定ページを表示する
+/* 新テーマでは、div id="dokubook__content の後に div id="home" を追加している */
+#dokuwiki__content {
   position: static;
   font-size: 14px;
 }

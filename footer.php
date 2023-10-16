@@ -12,7 +12,7 @@
 
 </div>
 
-</div><!--dokuwiki_container-->
+</div><!--dokuwiki__content-->
 </div><!--dokuwiki__site-->
 </body>
 </html>
