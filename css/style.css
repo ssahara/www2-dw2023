@@ -30,6 +30,8 @@ body {
   font-size: 80% !important;
 }
 
+/* dokubook は旧テーマの名称。head.php の終りに div id="dokubook_container" をおいている */
+/* 新テーマでは、div id="dokubook_container の後に div id="home" を追加している */
 #dokubook_container {
   position: static;
   font-size: 14px;
@@ -37,7 +39,7 @@ body {
 
 
 /* Logo */
-
+/* 未使用: id="logo" は使われていない。 header.php内で {h1,p}.logo クラスは使用中 */
 #logo {
   /* position:absolute; top:0; left:0; */
   /* position: relative; */
@@ -362,6 +364,7 @@ img {
 /* 旧ルールを style-disused.css に移動 */
 
 /* navigation クラスは {archive, comments, search}.php で使用している */
+/* ただし、wp_page_numbersプラグインを使用しない場合の「前へ・次へ」用 */
 .navigation {
   display: block;
   margin-top: 10px;
@@ -370,16 +373,17 @@ img {
   /* text-align: center; */
   font-size: 15px;
 }
-
-/* 旧ルールを style-disused.css に移動 */
-
+/* 以下2ルールは、wp_page_numbersプラグインを使用しない場合の「前へ・次へ」用 */
 .alignright { float: right; }
 .alignleft  { float: left; }
 
 
+/* 旧ルールを style-disused.css に移動 */
+
+
 /* Home page */
 
-/* .paegnave は footer.php で使用している */
+/* pagenave: footer.php で定義 ＝ページ先頭へスクロール */
 div.pagenavi {
   font-size: 16px;
   margin: 4px 0px 2px 0px;
@@ -390,6 +394,7 @@ div.pagenavi {
   bottom: 50px;
 }
 
+/* スクリーンサイズが1140px以上の場合に適用 */
 @media screen and (min-width: 1140px) {
   div.pagenavi {
     right: calc(50% - 570px);
@@ -397,7 +402,9 @@ div.pagenavi {
 }
 
 
-
+/*
+ * WP 投稿記事の本文
+ */
 .excerpt {
   margin-bottom: 80px;
   border-top: none;
@@ -447,7 +454,9 @@ div.pagenavi {
   padding: 6px 7px;
 }
 
-/* single 投稿のタイトルパネル */
+/*
+ * WP 投稿記事のタイトルパネル
+ */
 div.posthead {
   background: url(../images/bg_title.png) no-repeat;
   background-size: auto 100%;
@@ -525,6 +534,9 @@ div.posthead div.draft {
   background-color: #FFC8C8;
 }
 
+/*
+ * WP 投稿記事の「前へ・次へ」ナビゲーション
+ */
 /*detail pager*/
 .detail-pager {
   padding: 0 0 20px 0;
@@ -581,6 +593,19 @@ a:hover .detail-pager-date {
   text-align: right;
 }
 
+/*
+ * contentクラス: {single, page}.php で定義
+ * single.php 
+ *   <div.excerpt?
+ *     <div.posthead></div> 
+ *     <div.content></div>
+ *   </div><!--emd of excerpt>
+ *
+ * single.php 
+ *   <div.excerpt id="<?php the_ID() ?>">
+ *     <div.content></div>
+ *   </div><!--emd of excerpt>
+ */
 
 div.content {
   /* border: 1px solid #A4E1FF; */
@@ -594,6 +619,8 @@ div.content {
   color: #2B73B7;
   text-decoration:underline;
 }
+
+/* 記事内: 既報へのリンク */
 .content a.post {
   /* background: #FFFDD7 url(../images/News-icon16.png) 0px 0px no-repeat; */
   /* background: #FFFDD7 url(../images/Location-NEWS2-icon16.png) 0px 0px no-repeat; */
@@ -611,6 +638,7 @@ div.content {
   font-size: 95%;
 }
 
+/* 記事内: ポイントピックアップへのリンク */
 .content a.point-pickup {
   /*background: #FFFDD7 url(../images/Get-info-icon16.png) 0px 0px no-repeat;*/
   /*background: #FFFDD7 url(../images/mark-131d-16.gif) 0px 0px no-repeat; */
@@ -623,7 +651,6 @@ div.content {
   /* color: transparent; */
   /*font-size: 80%;*/
 }
-
 .content a.point-pickup:after {
   color: blue\9; /* IE8 hack */
 /*
@@ -632,17 +659,13 @@ div.content {
 */
 }
 
-
-
-
-
-
-
+/* 記事内: WPの more タグは使用していない */
 .more {
   margin-left:16px;
 }
 
 
+/* 記事内: 画像関係 */
 
 /* Image */
 
@@ -765,6 +788,7 @@ a.rsslink {
   padding-left: 20px;
 }
 
+/* WP フッター: id=footer は fotter.php 内で定義 */
 /* Footer */
 
 #footer {
@@ -778,6 +802,7 @@ a.rsslink {
 #footer a {
   color: #2B73B7;
 }
+/* スクリーンサイズが 767px以下の場合に適用 */
 @media screen and (max-width: 767px) {
   #footer {
     font-size: 2.0833vw;
@@ -847,6 +872,7 @@ a.rsslink {
   padding: 20px 42px 20px 35px;
   text-align: center;
 }
+/* スクリーンサイズが 950px以下の場合に適用 */
 @media screen and (max-width: 950px) {
   .gnav-list li a {
     padding: 20px 25px 20px 25px;
@@ -855,6 +881,7 @@ a.rsslink {
     padding: 20px 32px 20px 25px;
   }
 }
+/* スクリーンサイズが 860px以下の場合に適用 */
 @media screen and (max-width: 860px) {
   .gnav-list li a {
     padding: 20px 16px 20px 16px;
@@ -1114,6 +1141,11 @@ ul.posts-by-tag-list.is-open {
   padding: 5px 15px;
   margin: 0;
 }
+
+/* ------------------------------------------------
+ * responsive
+ */
+/* スクリーンサイズが 767px以下の場合に適用 */
 @media screen and (max-width: 767px) {
   .mt35 {
     margin-top: 14.7916vw;
@@ -1155,10 +1187,13 @@ ul.posts-by-tag-list.is-open {
   div.breadcrumbs div {
     padding: 0;
   }
+
   #home {
     box-shadow: none;
     padding: 2.5vw 2.08333vw;
   }
+
+/* pagenave: footer.php で定義 ＝ページ先頭へスクロール */
   div.pagenavi {
     right: 4.25vw;
     bottom: 5vw;
@@ -1168,6 +1203,11 @@ ul.posts-by-tag-list.is-open {
     max-width: 100%;
     height: auto;
   }
+
+/*
+ * スマホ用メニュー（ハンバーガーボタン） header.php で定義
+ * <div class="nav-toggle nopc">
+ */
   .nav-toggle {
     position: absolute;
     cursor: pointer;
@@ -1275,6 +1315,8 @@ ul.posts-by-tag-list.is-open {
   .spnav-sitemap {
     text-align: center;
   }
+
+
   .mv-txt {
     top: 4.2vw;
     left: 3.75vw;
@@ -1401,6 +1443,7 @@ ul.posts-by-tag-list.is-open {
 /* detail sp
 -------------------------------------------------------------- */
 
+/* スクリーンサイズが 767px以下の場合に適用 */
 @media screen and (max-width: 767px) {
 
   div.content {
@@ -1537,11 +1580,13 @@ ul.posts-by-tag-list.is-open {
 
 
 /*responsive*/
+/* スクリーンサイズが 768px以上の場合に適用 */
 @media all and (min-width: 768px) {
   .nopc {
     display: none !important;
   }
 }
+/* スクリーンサイズが 767px以下の場合に適用 */
 @media all and (max-width: 767px) {
   .nosp {
     display: none !important;
