@@ -26,18 +26,6 @@ body {
   position: relative; /* #dokuwiki__site .wrapper */
 }
 
-.small {
-  font-size: 80% !important;
-}
-
-/* dokubook は旧テーマの名称。head.php の終りに div id="dokubook_container" をおいている */
-/* 新テーマでは、div id="dokubook_container の後に div id="home" を追加している */
-#dokubook_container {
-  position: static;
-  font-size: 14px;
-}
-
-
 /* Logo */
 /* 未使用: id="logo" は使われていない。 header.php内で {h1,p}.logo クラスは使用中 */
 #logo {
@@ -249,6 +237,12 @@ div.breadcrumbs .bcsep {
 /* 旧ルールを style-disused.css に移動 */
 
 
+/* dokubook は旧テーマの名称。head.php の終りに div id="dokubook_container" をおいている */
+/* 新テーマでは、div id="dokubook_container の後に div id="home" を追加している */
+#dokubook_container {
+  position: static;
+  font-size: 14px;
+}
 
 
 
@@ -299,6 +293,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* id=container は使用されていない */
 #container, #home {
   line-height: 180%;
   padding: 15px 16px;
@@ -360,6 +355,11 @@ img {
   margin-left: 16px;
 }
 
+.small {
+  font-size: 80% !important;
+}
+
+
 /* Single post */
 /* 旧ルールを style-disused.css に移動 */
 
@@ -383,27 +383,26 @@ img {
 
 /* Home page */
 
-/* pagenave: footer.php で定義 ＝ページ先頭へスクロール */
-div.pagenavi {
-  font-size: 16px;
-  margin: 4px 0px 2px 0px;
-  border: none;
-  padding: 0;
-  position: fixed;
-  right: 0;
-  bottom: 50px;
-}
-
-/* スクリーンサイズが1140px以上の場合に適用 */
-@media screen and (min-width: 1140px) {
-  div.pagenavi {
-    right: calc(50% - 570px);
-  }
-}
-
+/* ------------------------------------------------
+ * div id="dokuwiki_content（未使用） シャドー付きボックス内
+ * 現状、div =id="home" がその役割を果たしている
+ */
+/*
+ * contentクラス: {single, page}.php で定義
+ * single.php 
+ *   <div.excerpt>
+ *     <div.posthead></div> 
+ *     <div.content></div>
+ *   </div><!--emd of excerpt>
+ *
+ * single.php 
+ *   <div.excerpt id="<?php the_ID() ?>">
+ *     <div.content></div>
+ *   </div><!--emd of excerpt>
+ */
 
 /*
- * WP 投稿記事の本文
+ * WP 投稿全体（タイトル、本文、その他）
  */
 .excerpt {
   margin-bottom: 80px;
@@ -535,78 +534,8 @@ div.posthead div.draft {
 }
 
 /*
- * WP 投稿記事の「前へ・次へ」ナビゲーション
+ * WP 投稿記事の本文
  */
-/*detail pager*/
-.detail-pager {
-  padding: 0 0 20px 0;
-}
-.detail-pager ul {
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-.detail-pager ul li {
-  width: calc(50% - 10px);
-  text-indent: 0;
-  display: flex;
-}
-.detail-pager ul li p {
-  margin: 0;
-}
-.detail-pager ul li::before {
-  display: none;
-}
-.detail-pager ul li a {
-  border: 1px solid #AFAFAF;
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 14px;
-  background-repeat: no-repeat;
-  background-size: 28px auto;
-  font-size: 14px;
-  color: #2B73B7;
-}
-.detail-pager ul li a:hover {
-  background-color: #fbfbfb;
-}
-.detail-pager-prev a {
-  padding-right: 19px;
-  padding-left: 69px;
-  background-image: url(../images/icn_prev.svg);
-  background-position: 20px 22px;
-}
-.detail-pager-date {
-  display: block;
-  font-weight: bold;
-  color: #000;
-}
-a:hover .detail-pager-date {
-  text-decoration: underline #000000;
-}
-.detail-pager-next a {
-  padding-right: 69px;
-  padding-left: 19px;
-  background-image: url(../images/icn_next.svg);
-  background-position: right 20px top 22px;
-  text-align: right;
-}
-
-/*
- * contentクラス: {single, page}.php で定義
- * single.php 
- *   <div.excerpt?
- *     <div.posthead></div> 
- *     <div.content></div>
- *   </div><!--emd of excerpt>
- *
- * single.php 
- *   <div.excerpt id="<?php the_ID() ?>">
- *     <div.content></div>
- *   </div><!--emd of excerpt>
- */
-
 div.content {
   /* border: 1px solid #A4E1FF; */
   font-size: 15px;
@@ -663,6 +592,72 @@ div.content {
 .more {
   margin-left:16px;
 }
+
+
+/*
+ * WP 投稿記事の「前へ・次へ」ナビゲーション
+ */
+/*detail pager*/
+.detail-pager {
+  padding: 0 0 20px 0;
+}
+.detail-pager a {
+
+}
+.detail-pager ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+.detail-pager ul li {
+  width: calc(50% - 10px);
+  text-indent: 0;
+  display: flex;
+}
+.detail-pager ul li::before {
+  display: none;
+}
+.detail-pager ul li a {
+  border: 1px solid #AFAFAF;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 14px;
+  background-repeat: no-repeat;
+  background-size: 28px auto;
+  font-size: 14px;
+  color: #2B73B7;
+}
+.detail-pager ul li a:hover {
+  background-color: #fbfbfb;
+}
+.detail-pager ul li p {
+  margin: 0;
+}
+.detail-pager-prev a {
+  padding-right: 19px;
+  padding-left: 69px;
+  background-image: url(../images/icn_prev.svg);
+  background-position: 20px 22px;
+}
+.detail-pager-next a {
+  padding-right: 69px;
+  padding-left: 19px;
+  background-image: url(../images/icn_next.svg);
+  background-position: right 20px top 22px;
+  text-align: right;
+}
+.detail-pager-date {
+  display: block;
+  font-weight: bold;
+  color: #000;
+}
+/* 以下のルールは不要
+a:hover .detail-pager-date {
+  text-decoration: underline #000000;
+}
+*/
+
 
 
 /* 記事内: 画像関係 */
@@ -788,9 +783,28 @@ a.rsslink {
   padding-left: 20px;
 }
 
-/* WP フッター: id=footer は fotter.php 内で定義 */
+/* ------------------------------------------------
+/* WP フッター:  */
 /* Footer */
+/* */
+/* 記事内: pagenave: footer.php で定義 ＝ページ先頭へスクロール */
+div.pagenavi {
+  font-size: 16px;
+  margin: 4px 0px 2px 0px;
+  border: none;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+}
+/* スクリーンサイズが1140px以上の場合に適用 */
+@media screen and (min-width: 1140px) {
+  div.pagenavi {
+    right: calc(50% - 570px);
+  }
+}
 
+/* div id=footer は fotter.php 内で定義 */
 #footer {
   color: #111111;
   font-size: 11px;
@@ -812,6 +826,10 @@ a.rsslink {
 }
 
 
+
+/* ------------------------------------------------
+ * グローバルナビゲーション header.php で定義
+ */
 /*gnav*/
 .gnav-list {
   display: flex;
