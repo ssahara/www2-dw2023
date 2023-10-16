@@ -22,10 +22,13 @@
 nav.gnav { display: none; }
 .spnav { display: none; }
 
-div#wp_page_numbers {
+#wp_page_numbers {
   display: none;
 }
-div.navigation, div.pagenavi {
+nav#scroll-to-top {
+  display: none;
+}
+div.navigation {
   display: none;
 }
 div.comments {

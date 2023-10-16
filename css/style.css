@@ -301,22 +301,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* id=container は使用されていない */
-#container, #home {
-  line-height: 180%;
-  padding: 15px 16px;
-  background-color: white;
-  box-shadow: 0 0 7px rgba(0,0,0,0.3);
-}
-
-#container a:link, a:active, a:visited, a:hover {
-  color:#2B73B7;
-}
-#container a:hover {
-  text-decoration: underline;
-}
-
-
 table {
   background-color: #fff; /*  __background__ */
   border-spacing: 0px;
@@ -796,7 +780,7 @@ a.rsslink {
 /* Footer */
 /* */
 /* 記事内: pagenave: footer.php で定義 ＝ページ先頭へスクロール */
-div.pagenavi {
+nav#scroll-to-top {
   font-size: 16px;
   margin: 4px 0px 2px 0px;
   border: none;
@@ -807,7 +791,7 @@ div.pagenavi {
 }
 /* スクリーンサイズが1140px以上の場合に適用 */
 @media screen and (min-width: 1140px) {
-  div.pagenavi {
+  nav#scroll-to-top {
     right: calc(50% - 570px);
   }
 }
@@ -1220,12 +1204,12 @@ ul.posts-by-tag-list.is-open {
   }
 
 /* pagenave: footer.php で定義 ＝ページ先頭へスクロール */
-  div.pagenavi {
+  nav#scroll-to-top {
     right: 4.25vw;
     bottom: 5vw;
     width: 7.7354vw;
   }
-  div.pagenavi img {
+  nav#scroll-to-top img {
     max-width: 100%;
     height: auto;
   }
