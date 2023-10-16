@@ -402,14 +402,9 @@ img {
   clear: both;
 }
 .excerpt h4 {
-  clear: both;
-  background: #9D9A9A;
   font-size: 15px;
-  font-weight: bold;
-  color: #fff;
-  padding: 15px 24px;
   line-height: 1.4;
-  margin-top: 30px;
+  clear: both;
 }
 .excerpt ul {
   list-style-type: none;
@@ -522,9 +517,14 @@ div.content {
   /* border: 1px solid #A4E1FF; */
   font-size: 15px;
 }
+.content p:empty {
+  display: none;
+}
 .content p {
   font-size:100%;
   line-height: 200%;
+  text-align: justify;
+  text-justify: auto;
 }
 .content a:hover {
   color: #2B73B7;
@@ -568,6 +568,29 @@ div.content {
   content: " (解説)";
   font-size: 70%;
 */
+}
+/* 投稿記事の参考文献セクション */
+.content h3.reference_list {
+  margin-bottom: 0;
+  padding: .5rem 1rem;
+  border-top: 1px solid #9D9A9A;
+}
+.content h3.reference_list ~ ul {
+  margin-top: 0;
+}
+.content h3.reference_list ~ ul li {
+  font-size: 95%;
+  line-height: 1.6;
+  padding: .5rem 0; 
+ }
+/* 投稿記事 セクション小見出し */
+.content h4 {
+  margin-top: 30px;
+  padding: 15px 24px;
+  background: #9D9A9A;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
 }
 
 /* 記事内: WPの more タグは使用していない */
