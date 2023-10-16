@@ -355,16 +355,6 @@ img {
 /* Single post */
 /* 旧ルールを style-disused.css に移動 */
 
-/* navigation クラスは {archive, comments, search}.php で使用している */
-/* ただし、wp_page_numbersプラグインを使用しない場合の「前へ・次へ」用 */
-.navigation {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 60px;
-  /* border: 1px solid red; */
-  /* text-align: center; */
-  font-size: 15px;
-}
 /* 以下2ルールは、wp_page_numbersプラグインを使用しない場合の「前へ・次へ」用 */
 .alignright { float: right; }
 .alignleft  { float: left; }
@@ -376,8 +366,8 @@ img {
 /* Home page */
 
 /* ------------------------------------------------
- * div id="dokuwiki_content（未使用） シャドー付きボックス内
- * 現状、div id="wp__content" がその役割を果たしている
+ * main id="dokuwiki__content"
+ * div id="wp__content" シャドー付きボックス
  */
 /*
  * contentクラス: {single, page}.php で定義
@@ -460,7 +450,7 @@ div.posthead {
   flex-wrap: wrap;
   gap: 6px 14px;
 }
-.postdate {
+div.posthead .postdate {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
@@ -512,21 +502,21 @@ div.posthead div.taglist a {
   line-height: 1.5;
 }
 div.posthead div.nf {
-  /* newsflash category */
+  /* FIXME newsflash category */
 }
 div.posthead div.followup {
-  /* draft news flash category */
+  /* FIXME draft news flash category */
   color: gray !important;
   background-color: greenyellow;
 }
 div.posthead div.draft {
-  /* draft news flash category */
+  /* FIXME draft news flash category */
   color: #DB0000 !important;
   background-color: #FFC8C8;
 }
 
 /*
- * WP 投稿記事の本文
+ * WP 投稿記事の本文（投稿と固定ページで共通）
  */
 div.content {
   /* border: 1px solid #A4E1FF; */
@@ -644,12 +634,20 @@ div.content {
   font-weight: bold;
   color: #000;
 }
-/* 以下のルールは不要
-a:hover .detail-pager-date {
-  text-decoration: underline #000000;
-}
-*/
 
+/*
+ * 旧「前へ・次へ」ナビゲーション
+ * navigation クラスは {archive, comments, search}.php に残っている
+ * ただし、wp_page_numbersプラグインを使用しない場合のみ
+ */
+.navigation {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  /* border: 1px solid red; */
+  /* text-align: center; */
+  font-size: 15px;
+}
 
 
 /* 記事内: 画像関係 */
@@ -768,18 +766,7 @@ legend {
 }
 
 
-
-
-a.rsslink {
-  background:url(../images/rss-16.gif) top left no-repeat; 
-  padding-left: 20px;
-}
-
-/* ------------------------------------------------
-/* WP フッター:  */
-/* Footer */
-/* */
-/* 記事内: pagenave: footer.php で定義 ＝ページ先頭へスクロール */
+/* 記事内: ページ先頭へスクロール footer.php で定義 */
 nav#scroll-to-top {
   font-size: 16px;
   margin: 4px 0px 2px 0px;
@@ -796,7 +783,10 @@ nav#scroll-to-top {
   }
 }
 
-/* div id=footer は fotter.php 内で定義 */
+/* ------------------------------------------------
+/* WP フッター: 
+/* footer id=footer を fotter.php 内で定義
+ */
 #footer {
   color: #111111;
   font-size: 11px;
@@ -917,6 +907,9 @@ nav#scroll-to-top {
   font-weight: normal;
   padding: 5px 0;
 }
+
+
+/* mv: WPトップタイトルバナー （index.phpでのみ使用）*/
 .mv {
   position: relative;
 }
@@ -946,12 +939,15 @@ nav#scroll-to-top {
   max-width: 500px;
   margin: 0;
 }
+
+/* WPトップタイトルバナー後のテキスト (index.php で使用)*/
 .index-txt {
   margin: 17px 0 31px 0;
   text-align: center;
   font-size: 11px;
   color: #000;
 }
+/* 最新記事・国名タグ一覧 見出し（{404, archive, index}.php で使用）  */
 .index-mh {
   background: #707070;
   color: #fff;
@@ -961,6 +957,7 @@ nav#scroll-to-top {
   border: none;
   margin-bottom: 18px;
 }
+/* 国名タグクラウド */
 .index-tag {
   padding: 10px 0;
 }
@@ -970,6 +967,7 @@ nav#scroll-to-top {
 .index-tag a {
   color: #2B73B7;
 }
+/* 全記事一覧ページに移動するボタン */
 .index-btn {
   text-align: center;
   padding: 17px 0 0 0;
@@ -988,6 +986,8 @@ nav#scroll-to-top {
   text-decoration: none;
   opacity: 0.8;
 }
+
+
 .news-list ul,
 .posts-by-tag-list {
   list-style-type: none;
@@ -1143,6 +1143,8 @@ ul.posts-by-tag-list.is-open {
 .mt35 {
   margin-top: 35px;
 }
+
+/* 固定ページ3200の「国別記事一覧」で適用される */
 .wp-block-tag-cloud {
   font-weight: bold !important;
 }
@@ -1184,7 +1186,7 @@ ul.posts-by-tag-list.is-open {
   #dokuwiki__header p.claim {
     font-size: 1.875vw;
   }
-  div.breadcrumbs{
+  div.breadcrumbs {
     font-size: 2.7vw;
     padding: 1.6667vw 2.5vw;
     border-bottom: 1px solid #ccc;
@@ -1568,6 +1570,8 @@ ul.posts-by-tag-list.is-open {
     padding-left: 3vw;
     background-position: right 3vw top 4vw;
   }
+
+  /* scrolling overflow table */
   div.tablearea {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
