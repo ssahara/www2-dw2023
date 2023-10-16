@@ -4,6 +4,7 @@
 
 
 </div><!--home-->
+</main><!--dokuwiki__content-->
 
 <div id="footer">
 <p><a href="https://www2.rwmc.or.jp/">諸外国での高レベル放射性廃棄物処分</a> 2002-2023 | <a href="/about" title="about">当サイトについて</a></p>
@@ -12,7 +13,6 @@
 
 </div>
 
-</div><!--dokuwiki__content-->
 </div><!--dokuwiki__site-->
 </body>
 </html>

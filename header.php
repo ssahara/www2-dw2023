@@ -199,6 +199,6 @@
 </nav><!-- gnav -->
 
 
-<div id="dokuwiki__content">
+<main id="dokuwiki__content">
 
 <div id="home">
