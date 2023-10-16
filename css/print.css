@@ -5,15 +5,15 @@
 
 /* @media print { */
 
-#dokubook_container {
-  position: static;
-}
 #dokuwiki__header .headings {
   width: 100%;
 }
 #dokuwiki__usertools,
 #dokuwiki__sitetools {
   display: none;
+}
+#dokuwiki__content {
+  position: static;
 }
 #container, #home {
   border: none;
