@@ -5,11 +5,43 @@
  * 2023年デザインで廃止した、旧デザインのルール
 */
 
+/* Header */
+/* 旧デザインで使用していたと思われるルール
+ * 2023年デザインでは使用していない
+ */
+#header {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  /* background-color: red; */
+}
+#header p {
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+  font-size: 80%;
+}
+#header h1 {
+  margin:0;
+  padding: 0;
+  font-size: 195%;
+  font-weight: bolder;
+  text-align: right;
+  /* margin-top : -5px; */
+}
+#header h1 a {
+  color: #ccc;
+  text-decoration: none !important;
+  font-variant: small-caps;
+  letter-spacing: 2pt;
+}
+#header h4 { display: none; }
+
+
 /* Sidebar */
 /* 旧デザインで使用していた左サイドバー関係のルール
  * 2023年デザインではサイドバーは使用しない
  */
-
 #leftside {
   position: absolute;
   top: 100px;
