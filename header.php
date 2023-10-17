@@ -70,6 +70,20 @@
 <?php endif; ?>
         <p class="claim">Learn from foreign experiences in HLW management</p>
     </div>
+    <!-- SITE TOOLS relocation -->
+    <div id="dokuwiki__sitetools" class="tools nosp">
+
+        <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url(); ?>">
+            <div class="no">
+                <label class="screen-reader-text" for="s">検索:</label>
+                <input type="text" value="" name="s" id="s" />
+                <input type="submit" id="searchsubmit" value="検索" />
+            </div>
+        </form>
+        <ul>
+            <li class="action recent"><a href="/start?do=index" title="サイトマップ [x]" rel="nofollow" accesskey="x">サイトマップ</a></li>
+        </ul>
+    </div>
 
     <div class="tools group nosp">
         <!-- USER TOOLS -->
@@ -85,7 +99,7 @@
 <?php endif; ?>
             </p>
         </div>
-        <!-- SITE TOOLS -->
+        <!-- SITE TOOLS --><!--
         <div id="dokuwiki__sitetools">
 
             <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url(); ?>">
@@ -98,7 +112,7 @@
             <ul>
                 <li class="action recent"><a href="/start?do=index" title="サイトマップ [x]" rel="nofollow" accesskey="x">サイトマップ</a></li>
             </ul>
-        </div>
+        </div> -->
 
     </div><!--tools group nosp -->
     <!-- Hamburger menu -->

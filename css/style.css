@@ -63,7 +63,7 @@ body {
 }
 #dokuwiki__header .tools {
   margin-top: -0.1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
   width: 39%;
 }
 #dokuwiki__header .tools ul {
