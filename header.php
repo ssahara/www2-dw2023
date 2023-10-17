@@ -167,8 +167,7 @@
     <!-- BREADCRUMBS -->
     <div class="breadcrumbs">
         <div class="youarehere">
-            <span class="bchead">現在位置:</span>
-            <bdi><a href="https://www2.rwmc.or.jp/" class="wikilink1">top</a></bdi>
+            <span class="bchead">現在位置:</span><bdi><a href="https://www2.rwmc.or.jp/" class="wikilink1">top</a></bdi>
             &gt;&nbsp;<bdi><a href="<?php echo home_url(); ?>" class="wikilink1" style="font-weight: bold;">海外情報ニュースフラッシュ</a></bdi> 
 <?php if (is_home() || is_front_page()): ?>
             &nbsp;
