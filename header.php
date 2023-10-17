@@ -100,7 +100,8 @@
             </ul>
         </div>
 
-    </div>
+    </div><!--tools group nosp -->
+    <!-- Hamburger menu -->
     <div class="nav-toggle nopc">
         <div>
             <span></span>
@@ -147,21 +148,24 @@
             </form>
             <p class="spnav-sitemap"><a href="/start?do=index" title="サイトマップ [x]" rel="nofollow" accesskey="x">サイトマップ</a></p>
         </div>
-    </div>
+    </div><!-- spnav nopc -->
 
     <!-- BREADCRUMBS -->
     <div class="breadcrumbs">
         <div class="youarehere">
+            <span class="bchead">現在位置:</span>
+            <bdi><a href="https://www2.rwmc.or.jp/" class="wikilink1">top</a></bdi>
+            &gt;&nbsp;<bdi><a href="<?php echo home_url(); ?>" class="wikilink1" style="font-weight: bold;">海外情報ニュースフラッシュ</a></bdi> 
 <?php if (is_home() || is_front_page()): ?>
-        <span class="bchead">現在位置:</span><bdi><a href="https://www2.rwmc.or.jp/" class="wikilink1">top</a></bdi> &gt;&nbsp;<bdi><a href="<?php echo home_url(); ?>" class="wikilink1" style="font-weight: bold;">海外情報ニュースフラッシュ</a></bdi>
+            &nbsp;
 <?php elseif (is_category()): ?>
-        <span class="bchead">現在位置:</span><bdi><a href="https://www2.rwmc.or.jp/" class="wikilink1">top</a></bdi> &gt;&nbsp;<bdi><a href="<?php echo home_url(); ?>" class="wikilink1" style="font-weight: bold;">海外情報ニュースフラッシュ</a></bdi> &gt;&nbsp;<bdi><?php single_cat_title(); ?></bdi>
+            &gt;&nbsp;<bdi><?php single_cat_title(); ?></bdi>
 <?php elseif (is_search()): ?>
-        <span class="bchead">現在位置:</span><bdi><a href="https://www2.rwmc.or.jp/" class="wikilink1">top</a></bdi> &gt;&nbsp;<bdi><a href="<?php echo home_url(); ?>" class="wikilink1" style="font-weight: bold;">海外情報ニュースフラッシュ</a></bdi> &gt;&nbsp;<bdi>検索結果</bdi>
+            &gt;&nbsp;<bdi>検索結果</bdi>
 <?php elseif ( is_single() ): ?>
-        <span class="bchead">現在位置:</span><bdi><a href="https://www2.rwmc.or.jp/" class="wikilink1">top</a></bdi> &gt;&nbsp;<bdi><a href="<?php echo home_url(); ?>" class="wikilink1" style="font-weight: bold;">海外情報ニュースフラッシュ</a></bdi> &gt;&nbsp;<bdi><?php echo get_the_date('Y-m-d'); ?>｜<?php wp_title('',true); ?></bdi>
+            &gt;&nbsp;<bdi><?php echo get_the_date('Y-m-d'); ?>｜<?php wp_title('',true); ?></bdi>
 <?php else: ?>
-        <span class="bchead">現在位置:</span><bdi><a href="https://www2.rwmc.or.jp/" class="wikilink1" title="wiki">top</a></bdi> &gt;&nbsp;<bdi><a href="<?php echo home_url(); ?>" class="wikilink1" style="font-weight: bold; "title="wiki">海外情報ニュースフラッシュ</a></bdi> &gt;&nbsp;<bdi><?php wp_title('',true); ?></bdi>
+            &gt;&nbsp;<bdi><?php wp_title('',true); ?></bdi>
 <?php endif; ?>
         </div>
     </div>
