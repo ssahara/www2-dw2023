@@ -781,7 +781,7 @@ nav#scroll-to-top {
 /* WP フッター: 
 /* footer id=footer を fotter.php 内で定義
  */
-#footer {
+#dokuwiki__footer {
   color: #111111;
   font-size: 11px;
   text-align: center;
@@ -789,12 +789,12 @@ nav#scroll-to-top {
   padding: 27px 24px 22px 2px;
   clear: both;
 }
-#footer a {
+#dokuwiki__footer a {
   color: #2B73B7;
 }
 /* スクリーンサイズが 767px以下の場合に適用 */
 @media screen and (max-width: 767px) {
-  #footer {
+  #dokuwiki__footer {
     font-size: 2.0833vw;
     padding: 3.875vw 2.5vw 7.5833vw 2.5vw;
     background: #FBFAF8;
