@@ -444,6 +444,16 @@ div.posthead {
   flex-wrap: wrap;
   gap: 6px 14px;
 }
+div.posthead .poststate {
+  margin-left: auto;
+  font-weight: bold;
+  font-variant-caps: small-caps;
+  color: #cf6;
+}
+div.posthead .poststate a {
+  font-size: 16px;
+  color: #2B73B7;
+}
 div.posthead .postdate {
   margin: 0;
   font-size: 16px;

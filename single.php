@@ -6,7 +6,12 @@
 ?>
 
 
-<?php while ( have_posts() ) : the_post() ?>
+<?php while ( have_posts() ) : the_post(); ?>
+<?php
+    // 投稿のステータスを取得
+    $post_status = get_post_status();
+    if ($post_status === 'publish') { $post_status = ''; }
+?>
 
 <?php
     // excerpt は「抜粋」という意味
@@ -19,11 +24,11 @@
 ?>
     <div class="excerpt">
 
-
         <a name="<?php the_time('Y-m-d'); ?>"></a>
         <div class="posthead">
             <div class="taglist"><?php echo the_country_tags(); ?></div>
-            <p class="postdate"><?php the_date('Y年m月d日'); ?></p> <?php edit_post_link('記事編集'); ?>
+            <p class="postdate"><?php the_date('Y年m月d日'); ?></p>
+            <div class="poststate"><?php echo $post_status; ?> <?php edit_post_link('記事編集'); ?></div>
             <h2><?php the_title() ?></h2>
         </div><!--posthead-->
 
