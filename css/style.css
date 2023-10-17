@@ -1,41 +1,13 @@
 @charset "UTF-8";
 /*
  * @author Takako Imamura (Akaru), Sahara Satoshi (RWMC)
-*/
+ * 
+ */
 
-/* @media all { */
-
-html, body {
-  font: normal 87.5%/1.6 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  color: #333;
-  background: #fbfaf9 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABzCAYAAABZ/2hDAAAAmElEQVQoz+3IIU5DURRF0X32ff2/oQlp6yDB1CGYAAMgwTCMjhwMDoEr72KYAq5LLlhvHyROIS2hpdN/p1NwitWStGS0OKb0RMYyBVJctovsb6awpLiMjRx2CDsqP5Z93Ee+q4uxDjlskfduuZtIgvlYpn0ilU2Uz/u2nypkdRT9Enn+Cgkl/UrlsYNB+/gGAhJin89c/adf1hUppirdLEYAAAAASUVORK5CYII=) top left repeat-x;
-  margin: 0 auto;
-  padding: 0;
-}
-body {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  font-size: 100%;
-}
-
-#dokuwiki__site {
-  margin: 0 auto;
-  max-width: 970px;
-  position: relative; /* #dokuwiki__site .wrapper */
-}
-
-/* Logo */
-/* 未使用: id="logo" は使われていない。 header.php内で {h1,p}.logo クラスは使用中 */
-#logo {
-  /* position:absolute; top:0; left:0; */
-  /* position: relative; */
-  cursor: pointer; 
-  width: 176px; height: 82px; margin: 0;
-  /* z-index:1;  */
-}
-
+/* ------------------------------------------------------------------
+ * DW Base style: lib/styles/all.css
+ * ------------------------------------------------------------------
+ */
 .group {
   display: inline-block;
 }
@@ -51,24 +23,34 @@ body {
   clear: both;
 }
 
+/* ------------------------------------------------------------------
+ * DW skin styles: lib/tpl/sokuwiki/css/basic.less
+ *   basic.less はリセットCSS を含んでいる（要調査、リセットは未考慮）
+ * ------------------------------------------------------------------
+ */
+html, body {
+  font: normal 87.5%/1.6 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  background: #fbfaf9 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABzCAYAAABZ/2hDAAAAmElEQVQoz+3IIU5DURRF0X32ff2/oQlp6yDB1CGYAAMgwTCMjhwMDoEr72KYAq5LLlhvHyROIS2hpdN/p1NwitWStGS0OKb0RMYyBVJctovsb6awpLiMjRx2CDsqP5Z93Ee+q4uxDjlskfduuZtIgvlYpn0ilU2Uz/u2nypkdRT9Enn+Cgkl/UrlsYNB+/gGAhJin89c/adf1hUppirdLEYAAAAASUVORK5CYII=) top left repeat-x;
+  margin: 0 auto;
+  padding: 0;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 100%;
+}
 
-#dokuwiki__header {
-  width: 100%;
-}
-#dokuwiki__header .headings {
-  float: left;
-}
-#dokuwiki__header .tools {
-  float: right;
-  text-align: right;
-}
-[dir=rtl] #dokuwiki__header .headings {
-  float: right;
-  text-align: right;
-}
-[dir=rtl] #dokuwiki__header .tools {
-  float: left;
-  text-align: left;
+/* ------------------------------------------------------------------
+ * DW skin styles: lib/tpl/sokuwiki/css/structure.less
+ * ------------------------------------------------------------------
+ */
+#dokuwiki__site {
+  margin: 0 auto;
+  max-width: 970px;
+  position: relative; /* #dokuwiki__site .wrapper */
 }
 #dokuwiki__header {
   padding: 2em 0 0;
@@ -77,14 +59,22 @@ body {
 #dokuwiki__header .headings {
   margin-bottom: 1.5em;
   width: 59%;
-}
-#dokuwiki__header .tools {
-  margin-bottom: 1.5em;
-  width: 39%;
+  float: left;
 }
 #dokuwiki__header .tools {
   margin-top: -0.1em;
+  margin-bottom: 1.5em;
+  width: 39%;
 }
+#dokuwiki__header .tools ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  font-size: 14px;
+  font-size: 0.875em;
+  margin-top: 10px;
+}
+
 #dokuwiki__header .logo {
   margin: 0;
   font-size: 1.5em;
@@ -118,48 +108,20 @@ body {
   margin-left: .5em;
   margin-right: 0;
 }
-#dokuwiki__header #searchform {
-  font-size: 0.875em;
-  margin-top:5px;
-  margin-bottom:6px;
-}
-#dokuwiki__header #searchform div.no {
-  position: relative;
-}
-#dokuwiki__header #searchform input#s {
-  font: inherit;
-  font-weight: normal;
-  color: #333;
-  background-color: #fff;
-  line-height: normal;
-  margin: 0;
-  box-sizing: border-box;
-  width: 18em;
-  padding: .35em 22px .35em .1em;
-  border: 1px solid #ccc;
-  box-shadow: inset 0 0 1px #eee;
-  border-radius: 2px;
-  min-width: 220px;
-}
-#dokuwiki__header #searchform input#searchsubmit {
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAY1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmaHTeAAAAIXRSTlMHNEEkTD4WPVEtKzcMQ1NATkc4VFJGHDEhJ0Q6RS8uVQBDAjEGAAAAXklEQVR4AS3HVQ4CUQDF0MHdGZfe/a+SNLz+NKeKNSnJCTj2Sn55rl9w+XNiTNLfaWRFHZsZ5cYZtew4xK7cZD7EBmaZFdtz9gO0MtlRWmTSvafH3GpZOulCWwBpxT/nGxX5oR8AJgAAAABJRU5ErkJggg==) no-repeat 0 0;
-  border-width: 0;
-  width: 19px;
-  height: 14px;
-  text-indent: -99999px;
-  margin-left: -22px;
-  box-shadow: none;
-  padding: 0;
-  vertical-align: middle;
-}
-#dokuwiki__header .tools ul {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style-type: none;
+
+#dokuwiki__content {
+  position: static;
   font-size: 14px;
-  font-size: 0.875em;
-  margin-top: 10px;
 }
+
+#dokuwiki__footer {
+  clear: both;
+}
+
+/* ------------------------------------------------------------------
+ * DW skin styles: lib/tpl/sokuwiki/css/usertools.less
+ * ------------------------------------------------------------------
+ */
 #dokuwiki__usertools {
   position: absolute;
   top: .5em;
@@ -181,47 +143,113 @@ body {
   color: #2b73b7;
   font-size: 0.875em;
 }
-div.breadcrumbs {
+
+/* ------------------------------------------------------------------
+ * DW skin styles: lib/tpl/sokuwiki/css/design.less
+ * ------------------------------------------------------------------
+ */
+#dokuwiki__sitetools {
+  text-align: right;
+  float: right;
+}
+#dokuwiki__sitetools #searchform {
+  font-size: 0.875em;
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+#dokuwiki__sitetools #searchform div.no {
+  position: relative;
+}
+#dokuwiki__sitetools #searchform input#s {
+  font: inherit;
+  font-weight: normal;
+  color: #333;
+  background-color: #fff;
+  line-height: normal;
+  margin: 0;
+  box-sizing: border-box;
+  width: 18em;
+  padding: .35em 22px .35em .1em;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 0 1px #eee;
+  border-radius: 2px;
+  min-width: 220px;
+}
+#dokuwiki__sitetools #searchform input#searchsubmit {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAY1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmaHTeAAAAIXRSTlMHNEEkTD4WPVEtKzcMQ1NATkc4VFJGHDEhJ0Q6RS8uVQBDAjEGAAAAXklEQVR4AS3HVQ4CUQDF0MHdGZfe/a+SNLz+NKeKNSnJCTj2Sn55rl9w+XNiTNLfaWRFHZsZ5cYZtew4xK7cZD7EBmaZFdtz9gO0MtlRWmTSvafH3GpZOulCWwBpxT/nGxX5oR8AJgAAAABJRU5ErkJggg==) no-repeat 0 0;
+  border-width: 0;
+  width: 19px;
+  height: 14px;
+  text-indent: -99999px;
+  margin-left: -22px;
+  box-shadow: none;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* BREADCRUMBS */
+#dokuwiki__header div.breadcrumbs {
   border-top: 1px solid #ccc;
   margin-bottom: 10px;
   font-size: 0.875em;
   clear: both;
 }
-div.breadcrumbs div {
+#dokuwiki__header div.breadcrumbs div {
   padding: .1em .35em;
 }
-div.breadcrumbs div:only-child {
+#dokuwiki__header div.breadcrumbs div:only-child {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #ccc;
 }
-div.breadcrumbs div:first-child {
+#dokuwiki__header div.breadcrumbs div:first-child {
   border-top: 1px solid #fff;
 }
-div.breadcrumbs div:last-child {
+#dokuwiki__header div.breadcrumbs div:last-child {
   border-bottom: 1px solid #ccc;
 }
-div.breadcrumbs .bcsep {
+#dokuwiki__header div.breadcrumbs .bcsep {
   font-size: 0.75em;
 }
 
-/* Sidebar */
-/* 旧ルールを style-disused.css に移動 */
 
-
-/* main id="dokuwiki__content" 内はページコンテンツの表示エリア
-/* WPでは、投稿または固定ページを表示する
-/* 新テーマでは、main id="dokubook__content の後に div id="wp__content" を追加している */
-#dokuwiki__content {
-  position: static;
-  font-size: 14px;
-}
-
+/* ------------------------------------------------------------------
+ * DW -> WP （投稿または固定ページを表示する）
+ * main id="dokuwiki__content" 内はページコンテンツの表示エリア
+ * main id="dokubook__content の後に div id="wp__content" を設定
+ * ------------------------------------------------------------------
+ */
 #wp__content {
   line-height: 180%;
   padding: 15px 16px;
   background-color: white;
   box-shadow: 0 0 7px rgba(0,0,0,0.3);
 }
+
+/* ページ先頭へスクロールするボタン footer.php で wp__content の末尾に設置 */
+nav#scroll-to-top {
+  font-size: 16px;
+  margin: 4px 0px 2px 0px;
+  border: none;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+}
+/* スクリーンサイズが1140px以上の場合に適用（ボックス右端から離しすぎない） */
+@media screen and (min-width: 1140px) {
+  nav#scroll-to-top {
+    right: calc(50% - 570px);
+  }
+}
+
+
+
+/* Header */
+/* 旧ルールを style-disused.css に移動 */
+
+/* Sidebar */
+/* 旧ルールを style-disused.css に移動 */
+
 
 
 
@@ -336,27 +364,27 @@ img {
 
 /* Home page */
 
-/* ------------------------------------------------
- * main id="dokuwiki__content"
- * div id="wp__content" シャドー付きボックス
- */
-/*
- * contentクラス: {single, page}.php で定義
- * single.php 
- *   <div.excerpt>
- *     <div.posthead></div> 
- *     <div.content></div>
- *   </div><!--emd of excerpt>
+/* ------------------------------------------------------------------
+ * WP__CONTENT
+ *   main id="dokuwiki__content"
+ *   div id="wp__content" シャドー付きボックス
  *
- * single.php 
- *   <div.excerpt id="<?php the_ID() ?>">
- *     <div.content></div>
- *   </div><!--emd of excerpt>
+ *   single.php 
+ *     <div.excerpt>
+ *       <div.posthead></div> 
+ *       <div#toc_container></div> : Table Of Contents Plus plugin
+ *       <div.content></div>
+ *     </div><!--emd of excerpt>
+ *
+ *   single.php 
+ *     <div.excerpt id="<?php the_ID() ?>">
+ *       <div.content></div>
+ *     </div><!--emd of excerpt>
+ * ------------------------------------------------------------------
  */
-
-/*
+/* ---------------------------------------------- *
  * WP 投稿全体（タイトル、本文、その他）
- */
+ * ---------------------------------------------- */
 .excerpt {
   margin-bottom: 80px;
   border-top: none;
@@ -401,9 +429,9 @@ img {
   padding: 6px 7px;
 }
 
-/*
+/* ---------------------------------------------- *
  * WP 投稿記事のタイトルパネル
- */
+ * ---------------------------------------------- */
 div.posthead {
   background: url(../images/bg_title.png) no-repeat;
   background-size: auto 100%;
@@ -481,9 +509,10 @@ div.posthead div.draft {
   background-color: #FFC8C8;
 }
 
-/*
- * WP 投稿記事の目次 by Table of Contents Plus プラグイン
- */
+/* ---------------------------------------------- *
+ * WP 投稿記事 目次 
+ *   Table of Contents Plus プラグイン
+ * ---------------------------------------------- */
 #toc_container {
 }
 #toc_container.no_bullets li:before {
@@ -501,9 +530,9 @@ div.posthead div.draft {
   padding-left: 2em;
 }
 
-/*
+/* ---------------------------------------------- *
  * WP 投稿記事の本文（投稿と固定ページで共通）
- */
+ * ---------------------------------------------- */
 div.content {
   /* border: 1px solid #A4E1FF; */
   font-size: 15px;
@@ -589,11 +618,10 @@ div.content {
   margin-left:16px;
 }
 
-
-/*
+/* ---------------------------------------------- *
  * WP 投稿記事の「前へ・次へ」ナビゲーション
- */
-/*detail pager*/
+ * ---------------------------------------------- */
+/* detail pager */
 .detail-pager {
   padding: 0 0 20px 0;
 }
@@ -649,11 +677,12 @@ div.content {
   color: #000;
 }
 
-/*
+/* ---------------------------------------------- *
  * 旧「前へ・次へ」ナビゲーション
- * navigation クラスは {archive, comments, search}.php に残っている
- * ただし、wp_page_numbersプラグインを使用しない場合のみ
- */
+ *   navigation クラスは
+ *   {archive, comments, search}.php に残っている
+ *   ただし、wp_page_numbersプラグインを使用しない場合のみ
+ * ---------------------------------------------- */
 .navigation {
   display: block;
   margin-top: 10px;
@@ -780,28 +809,11 @@ legend {
 }
 
 
-/* 記事内: ページ先頭へスクロール footer.php で定義 */
-nav#scroll-to-top {
-  font-size: 16px;
-  margin: 4px 0px 2px 0px;
-  border: none;
-  padding: 0;
-  position: fixed;
-  right: 0;
-  bottom: 50px;
-}
-/* スクリーンサイズが1140px以上の場合に適用 */
-@media screen and (min-width: 1140px) {
-  nav#scroll-to-top {
-    right: calc(50% - 570px);
-  }
-}
-
-/* ------------------------------------------------
-/* WP フッター: 
-/* footer id=footer を fotter.php 内で定義
- */
-#dokuwiki__footer {
+/* ---------------------------------------------- *
+ * WP フッター
+ *   footer id=footer を fotter.php 内で定義
+ * ---------------------------------------------- */
+#footer {
   color: #111111;
   font-size: 11px;
   text-align: center;
@@ -809,12 +821,12 @@ nav#scroll-to-top {
   padding: 27px 24px 22px 2px;
   clear: both;
 }
-#dokuwiki__footer a {
+#footer a {
   color: #2B73B7;
 }
 /* スクリーンサイズが 767px以下の場合に適用 */
 @media screen and (max-width: 767px) {
-  #dokuwiki__footer {
+  #footer {
     font-size: 2.0833vw;
     padding: 3.875vw 2.5vw 7.5833vw 2.5vw;
     background: #FBFAF8;
@@ -923,7 +935,7 @@ nav#scroll-to-top {
 }
 
 
-/* mv: WPトップタイトルバナー （index.phpでのみ使用）*/
+/* mv: メインビジュアル （index.phpでのみ使用）*/
 .mv {
   position: relative;
 }
@@ -1001,7 +1013,11 @@ nav#scroll-to-top {
   opacity: 0.8;
 }
 
-
+/* ---------------------------------------------- *
+ * 記事一覧
+ * ・sya_*         ：年号別アーカイブ プラグイン
+ * ・posts-by-tag-*：Posts By Tag プラグイン（国名タグ）
+ * ---------------------------------------------- */
 .news-list ul,
 .posts-by-tag-list {
   list-style-type: none;
@@ -1068,6 +1084,7 @@ nav#scroll-to-top {
 .sya_bracket {
   display: none;
 }
+
 .list-tag-mh {
   color: #000;
   font-size: 21px;
@@ -1167,6 +1184,9 @@ ul.posts-by-tag-list.is-open {
   padding: 5px 15px;
   margin: 0;
 }
+
+
+
 
 /* ------------------------------------------------
  * responsive
@@ -1620,7 +1640,3 @@ ul.posts-by-tag-list.is-open {
     display: none !important;
   }
 }
-
-
-
-/* } */
