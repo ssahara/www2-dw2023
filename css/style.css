@@ -482,6 +482,26 @@ div.posthead div.draft {
 }
 
 /*
+ * WP 投稿記事の目次 by Table of Contents Plus プラグイン
+ */
+#toc_container {
+}
+#toc_container.no_bullets li:before {
+  display: none;
+}
+#toc_container p.toc_title {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+#toc_container ul.toc_list {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0 !important;
+  padding-left: 2em;
+}
+
+/*
  * WP 投稿記事の本文（投稿と固定ページで共通）
  */
 div.content {
