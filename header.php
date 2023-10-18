@@ -133,6 +133,13 @@
                 </div>
             </div>
             <ul class="spnav-list">
+                <li><a href="<?php
+                    $recent = get_posts('numberposts=1');
+                    if (count($recent) > 0) {
+                        $recent_url = get_permalink($recent[0]->ID);
+                        echo $recent_url;
+                    }
+                ?>">最新記事</a></li>
                 <!--<li><a href="<?php echo home_url(); ?>">HOME</a></li>-->
                 <!--<li><a href="<?php echo home_url(); ?>/?page_id=2249">海外情報ニュースフラッシュについて</a></li>-->
                 <li>記事アーカイブ
@@ -188,6 +195,13 @@
 <!-- /header -->
 <nav class="gnav nosp">
 <ul class="gnav-list">
+    <li><a href="<?php
+        $recent = get_posts('numberposts=1');
+        if (count($recent) > 0) {
+            $recent_url = get_permalink($recent[0]->ID);
+            echo $recent_url;
+        }
+    ?>">最新記事</a></li>
     <!--<li><a href="<?php echo home_url(); ?>">HOME</a></li>-->
     <!--<li><a href="<?php echo home_url(); ?>/?page_id=2249">海外情報ニュースフラッシュについて</a></li>-->
     <li class="gnav-toggle"><button class="is-tab">記事アーカイブ</button>
