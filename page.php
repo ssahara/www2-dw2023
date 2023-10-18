@@ -71,6 +71,9 @@
         <?php //if (comments_open()) comments_template(); ?>
     </div>
 
+    <div id="edit_btn">
+        <?php edit_post_link('編集'); ?>
+    </div>
 
 <?php endwhile ?>
 
