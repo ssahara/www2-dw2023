@@ -624,15 +624,15 @@ div.content {
 }
 
 /* 投稿記事 追記セクション 見出し */
-/*.content h2 {
+.excerpt .content h2 {
   font-size: 150%;
   background: #e8a65c;
   color: #fff;
   padding: .83em 0 .17em 0.5em;
-  border-top: 1px solid #aaa;
+  border-top: 1px solid #e9a252;
   border-bottom: none;
   margin: 0;
-}*/
+}
 
 /* 記事内: WPの more タグは使用していない */
 .more {
