@@ -555,6 +555,7 @@ div.content {
   line-height: 200%;
   text-align: justify;
   text-justify: auto;
+  padding: 0 .5em;
 }
 .content a:hover {
   color: #2B73B7;
