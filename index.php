@@ -9,9 +9,9 @@
     <div class="mv">
         <p class="mv-img">
             <picture>
-                <source media="(min-width:768px)" srcset="<?php bloginfo('template_url'); ?>/images/img_mv_pc.png">
-                <source media="(max-width:767px)" srcset="<?php bloginfo('template_url'); ?>/images/img_mv_sp.png">
-                <img src="<?php bloginfo('template_url'); ?>/images/img_mv_pc.png" alt="海外情報ニュースフラッシュ">
+                <source media="(min-width:768px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/img_mv_pc.png">
+                <source media="(max-width:767px)" srcset="<?php echo get_stylesheet_directory_uri(); ?>/images/img_mv_sp.png">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/img_mv_pc.png" alt="海外情報ニュースフラッシュ">
             </picture>
         </p>
     </div>
