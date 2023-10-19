@@ -151,12 +151,12 @@
                     </ul>
                 </li>
                 <li><a href="<?php echo get_page_link(1516); ?>">ポイントピックアップ</a></li>
-                <li><a href="https://www2.rwmc.or.jp/publications:publications" target="_blank">情報冊子</a></li>
-                <li><a href="https://www2.rwmc.or.jp/links:start" target="_blank">リンク集</a></li>
+                <li><a href="https://www2.rwmc.or.jp/publications:publications" target="_self">情報冊子</a></li>
+                <li><a href="https://www2.rwmc.or.jp/links:start" target="_self">リンク集</a></li>
                 <!--<li>諸外国トピカル情報
                     <ul class="spsubnav">
-                        <li><a href="https://www2.rwmc.or.jp/srsr:start" target="_blank">安全評価事例集</a></li>
-                        <li><a href="https://www2.rwmc.or.jp/hlw:regional-development" target="_blank">高レベル放射性廃棄物処分事業と地域振興の係わり</a></li>
+                        <li><a href="https://www2.rwmc.or.jp/srsr:start" target="_self">安全評価事例集</a></li>
+                        <li><a href="https://www2.rwmc.or.jp/hlw:regional-development" target="_self">高レベル放射性廃棄物処分事業と地域振興の係わり</a></li>
                     </ul>
                 </li>-->
             </ul>
@@ -215,13 +215,13 @@
         </div>
     </li>
     <li><a href="<?php echo get_page_link(1516); ?>">ポイントピックアップ</a></li>
-    <li><a href="https://www2.rwmc.or.jp/publications:publications" target="_blank">情報冊子</a></li>
-    <li><a href="https://www2.rwmc.or.jp/links:start" target="_blank">リンク集</a></li>
+    <li><a href="https://www2.rwmc.or.jp/publications:publications" target="_self">情報冊子</a></li>
+    <li><a href="https://www2.rwmc.or.jp/links:start" target="_self">リンク集</a></li>
     <!--<li class="gnav-toggle"><button class="is-tab">諸外国トピカル情報</button>
         <div class="gnav-mega">
             <ul class="gnav-mega-list">
-                <li><a href="https://www2.rwmc.or.jp/srsr:start" target="_blank">安全評価事例集</a></li>
-                <li><a href="https://www2.rwmc.or.jp/hlw:regional-development" target="_blank">高レベル放射性廃棄物処分事業と地域振興の係わり</a></li>
+                <li><a href="https://www2.rwmc.or.jp/srsr:start" target="_self">安全評価事例集</a></li>
+                <li><a href="https://www2.rwmc.or.jp/hlw:regional-development" target="_self">高レベル放射性廃棄物処分事業と地域振興の係わり</a></li>
             </ul>
         </div>
     </li>-->
