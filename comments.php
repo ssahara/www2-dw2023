@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * WordPress Theme www2-dw2023: comments.php
+ * Template for displaying comments
+ * コメント機能は使用していない
+ */
 // Do not delete these lines
 	if (isset($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');

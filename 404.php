@@ -1,6 +1,7 @@
 <?php
 /**
- * 404.php
+ * WordPress Theme www2-dw2023: 404.php
+ * Template for displaying the 404 not found error page
  */
     get_header();
 ?>

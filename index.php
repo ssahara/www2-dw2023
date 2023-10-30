@@ -1,6 +1,7 @@
 <?php
 /**
- * index.php
+ * WordPress Theme www2-dw2023: index.php
+ * The main template file
  */
     get_header();
 ?>

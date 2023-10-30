@@ -1,6 +1,7 @@
 <?php
 /**
- * search.php
+ * WordPress Theme www2-dw2023: search.php
+ * Template for displaying search results pages
  */
     get_header();
 ?>

@@ -1,6 +1,7 @@
 <?php
 /**
- * archive.php
+ * WordPress Theme www2-dw2023: archive.php
+ * Template for displaying archive pages
  */
     get_header();
 ?>

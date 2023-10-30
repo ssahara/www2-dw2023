@@ -1,6 +1,7 @@
 <?php
 /**
- * page.php
+ * WordPress Theme www2-dw2023: page.php
+ * Template for displaying single pages
  */
     get_header();
 ?>
