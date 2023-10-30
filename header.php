@@ -1,3 +1,8 @@
+<?php
+/**
+ * WordPress Theme www2-dw2023: The header
+ */
+?><!doctype html>
 <html class="wordpress" <?php language_attributes(); ?>>
 
 <head>
