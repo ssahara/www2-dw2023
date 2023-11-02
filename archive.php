@@ -49,7 +49,7 @@
 
 
     <h2 class="index-mh mt35">国名タグ一覧</h2>
-    <div class="index-tag">
+    <div class="wp-block-tag-cloud">
         <?php the_widget('WP_Widget_Tag_Cloud'); ?>
     </div>
 

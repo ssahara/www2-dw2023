@@ -1014,16 +1014,6 @@ legend {
   border: none;
   margin-bottom: 18px;
 }
-/* 国名タグクラウド */
-.index-tag {
-  padding: 10px 0;
-}
-.index-tag p {
-  font-weight: bold !important;
-}
-.index-tag a {
-  color: #2B73B7;
-}
 /* 全記事一覧ページに移動するボタン */
 .index-btn {
   text-align: center;
@@ -1199,16 +1189,20 @@ ul.posts-by-tag-list.is-open {
 .list-category a {
   color: #2B73B7;
 }
-.index-tag .widgettitle {
-  display:none;
-}
 .mt35 {
   margin-top: 35px;
 }
 
-/* 固定ページ3200の「国別記事一覧」で適用される */
+/* ---------------------------------------------- *
+ * 国名タグクラウド
+ * ・WP_Widget_Tag_Cloud用 (index.php, archive.php)
+ * ・固定ページ3200の「国別記事一覧」にも適用
+ * ---------------------------------------------- */
 .wp-block-tag-cloud {
   font-weight: bold !important;
+}
+.wp-block-tag-cloud .widgettitle {
+  display:none;
 }
 .wp-block-tag-cloud a {
   display: inline-block;
