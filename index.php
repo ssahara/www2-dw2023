@@ -48,7 +48,7 @@
     <?php endwhile; ?>
         </ul>
     </div>
-    <p class="index-btn"><a href="<?php echo get_page_link(3111); ?>">全記事一覧へ</a></p>
+    <div class="index-btn"><a href="<?php echo get_page_link(3111); ?>">全記事一覧へ</a></div>
 <?php endif; ?>
 
 

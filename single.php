@@ -23,12 +23,13 @@
     // ニュースフラッシュ記事では moreタグを使用しないので、
     // excerpt クラスのdivタグで囲む必要は（本来は）ない。
 ?>
+    <article>
     <div class="excerpt">
 
         <a name="<?php the_time('Y-m-d'); ?>"></a>
         <div class="posthead">
             <div class="taglist"><?php echo the_country_tags(); ?></div>
-            <p class="postdate"><?php the_date('Y年m月d日'); ?></p>
+            <div class="postdate"><?php the_date('Y年m月d日'); ?></div>
             <div class="poststate"><?php echo $post_status; ?> <?php edit_post_link('記事編集'); ?></div>
             <h2><?php the_title() ?></h2>
         </div><!--posthead-->
@@ -42,53 +43,8 @@
             <p>(post by <?php the_author_meta('nickname'); ?> , last modified:  <?php the_modified_date('Y-m-d'); ?> )</p>
         </div>
 
-<?php
-    // 前の記事、次の記事の存在確認
-    $prevpost = get_adjacent_post(true, '', true);  //前の記事
-    $nextpost = get_adjacent_post(true, '', false); //次の記事
-?>
-
-    <?php if ( $prevpost or $nextpost ): ?>
-        <div class="detail-pager">
-            <ul>
-        <?php if ( $prevpost ): //前の記事が存在しているとき ?>
-            <li class="detail-pager-prev">
-                <a href="<?php echo get_permalink($prevpost->ID); ?>"><p>
-                    <span class="detail-pager-date"><?php echo mysql2date('Y-m-d', $prevpost->post_date); ?></span>
-                    <?php echo get_the_title($prevpost->ID); ?></p>
-                </a>
-            </li>
-        <?php endif; ?>
-
-        <?php if ( $nextpost ): //次の記事が存在しているとき ?>
-            <li class="detail-pager-next">
-                <a href="<?php echo get_permalink($nextpost->ID); ?>"><p>
-                    <span class="detail-pager-date"><?php echo mysql2date('Y-m-d', $nextpost->post_date); ?></span>
-                    <?php echo get_the_title($nextpost->ID); ?></p>
-                </a>
-            </li>
-        <?php endif; ?>
-    <?php endif; ?>
-            </ul>
-        </div>
-
     </div><!--excerpt-->
-
-<?php
-    /**
-     * 投稿された記事に <!--nextpage--> と入力すると記事を分割できる。
-     * 記事が長い場合には適当なところで分割してページングすることができる。
-     * 分割ページのリンクを出力するためにテンプレートタグ wp_link_pages() を使う。
-     * ニュースフラッシュではこの機能は使用しないため、コメントアウトしておく
-     */
-    /*
-    wp_link_pages(array(
-        'before' => '<p><strong>Pages:</strong> ',
-        'after' => '</p>',
-        'next_or_number' => 'number',
-    ));
-     */
-?>
+    </article>
 
 <?php
     /**
@@ -100,10 +56,36 @@
         <?php //if (comments_open()) comments_template(); ?>
     </div>
 
+<?php
+    // 前の記事、次の記事の存在確認
+    $prevpost = get_adjacent_post(true, '', true);  //前の記事
+    $nextpost = get_adjacent_post(true, '', false); //次の記事
+?>
+    <div class="detail-pager">
+<?php if ( $prevpost or $nextpost ): ?>
+        <ul>
+    <?php if ( $prevpost ): //前の記事が存在しているとき ?>
+            <li class="detail-pager-prev">
+                <a href="<?php echo get_permalink($prevpost->ID); ?>"><p>
+                    <span class="detail-pager-date"><?php echo mysql2date('Y-m-d', $prevpost->post_date); ?></span>
+                    <?php echo get_the_title($prevpost->ID); ?></p>
+                </a>
+            </li>
+    <?php endif; ?>
+
+    <?php if ( $nextpost ): //次の記事が存在しているとき ?>
+            <li class="detail-pager-next">
+                <a href="<?php echo get_permalink($nextpost->ID); ?>"><p>
+                    <span class="detail-pager-date"><?php echo mysql2date('Y-m-d', $nextpost->post_date); ?></span>
+                    <?php echo get_the_title($nextpost->ID); ?></p>
+                </a>
+            </li>
+    <?php endif; ?>
+        </ul>
+<?php endif; ?>
+    </div>
 
 <?php endwhile ?>
-
-
 
 
 <?php get_footer() ?>
