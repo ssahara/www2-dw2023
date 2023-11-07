@@ -66,18 +66,18 @@
         <ul>
     <?php if ( $prevpost ): //前の記事が存在しているとき ?>
             <li class="detail-pager-prev">
-                <a href="<?php echo get_permalink($prevpost->ID); ?>"><p>
+                <a href="<?php echo get_permalink($prevpost->ID); ?>"><div>
                     <span class="detail-pager-date"><?php echo mysql2date('Y-m-d', $prevpost->post_date); ?></span>
-                    <?php echo get_the_title($prevpost->ID); ?></p>
+                    <?php echo get_the_title($prevpost->ID); ?></div>
                 </a>
             </li>
     <?php endif; ?>
 
     <?php if ( $nextpost ): //次の記事が存在しているとき ?>
             <li class="detail-pager-next">
-                <a href="<?php echo get_permalink($nextpost->ID); ?>"><p>
+                <a href="<?php echo get_permalink($nextpost->ID); ?>"><div>
                     <span class="detail-pager-date"><?php echo mysql2date('Y-m-d', $nextpost->post_date); ?></span>
-                    <?php echo get_the_title($nextpost->ID); ?></p>
+                    <?php echo get_the_title($nextpost->ID); ?></div>
                 </a>
             </li>
     <?php endif; ?>
